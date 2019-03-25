@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="assets/css/Pretty-Header.css">
     <link rel="stylesheet" href="assets/css/sticky-dark-top-nav-with-dropdown.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon"/>
 
 
 </head>
