@@ -3,7 +3,7 @@
             <div
                 class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav links">
-                    <li class="nav-item" role="presentation"><a class="nav-link" style="margin-right:14px;font-family:'Roboto Slab', serif;font-size:19px;" href="../howitworks.php">How it Works?</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" style="margin-right:14px;font-family:'Roboto Slab', serif;font-size:19px;" href="howitworks.php">How it Works?</a></li>
                 </ul>
                 <form class="form-inline mx-auto" style="font-family:Roboto, sans-serif;"><input class="form-control" type="search" placeholder="Search for Posts ..." autofocus="" autocomplete="on" style="width:352px;"></form>
                 <ul class="nav navbar-nav ml-auto">
