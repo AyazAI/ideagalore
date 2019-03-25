@@ -110,7 +110,7 @@ if (isLoggedIn()) {
                 <div class="jumbotron">
                     <h1 data-aos="fade-down-left" data-aos-once="true">Add Value to Community</h1>
                     <p>Everything comes with courage. Just support your community</p>
-                    <div class="modal fade" role="dialog" tabindex="-1" id="post">
+                    <div class="modal fade" role="dialog" tabindex="-1" id="posts">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             
                             <form action="index.php" method="post">
