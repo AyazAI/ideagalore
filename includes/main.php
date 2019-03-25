@@ -110,40 +110,9 @@ if (isLoggedIn()) {
                 <div class="jumbotron">
                     <h1 data-aos="fade-down-left" data-aos-once="true">Add Value to Community</h1>
                     <p>Everything comes with courage. Just support your community</p>
-                    <div class="modal fade" role="dialog" tabindex="-1" id="posts">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            
-                            <form action="index.php" method="post">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Create Your Post</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                                <div class="modal-body">
-                                    <!-- <div class="dropdown">
-                                    <button class="btn btn-primary btn-sm dropdown-toggle float-none" data-toggle="dropdown" aria-expanded="false" type="button">Select Category</button>
-                                        <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
-                                    </div> -->
-                                    
-                                    <h1>Question</h1><input class="form-control-lg" type="text" placeholder="Write general statement" style="width:401px;height:49px;" name="question">
-                                    <hr>
-                                    <h1>Situation</h1>
-                                    <textarea class="form-control-lg" style="width:401px;height:131px;" placeholder="Explain it a bit!" name="situation">
-                                    </textarea>
-
-
-                                    <hr>
-                                </div>
-                                <div class="modal-footer">
-                                <button class="btn btn-light" type="button" data-dismiss="modal">Close</button>
-                                
-                                <input class="btn btn-primary" value="Share" type="submit" name="submit"></input>
-
-                                </div>
-                            </div>
-                            </form>
-                        </div>
-                    </div>
+                    
                     <p>
-                    <button class="btn btn-success" id="createpost" data-aos="fade-right" data-aos-delay="100" data-aos-once="true">Create your Post</button>
+                    <a class="btn btn-success" id="createpost" href="createpost.php" data-aos="fade-right" data-aos-delay="100" data-aos-once="true">Create your Post</a>
                     </p>
                 </div>
             </div>

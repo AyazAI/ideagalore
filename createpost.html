@@ -41,40 +41,28 @@
                         <div
                             class="dropdown-menu dropdown-menu-right" role="menu"><a class="dropdown-item" role="presentation" href="#">Settings </a><a class="dropdown-item" role="presentation" href="#">Payments </a><a class="dropdown-item" role="presentation" href="#">Logout </a></div>
         </li>
-        </ul><a class="btn btn-success btn-sm" role="button" href="#">Logout</a></div>
+        </ul><button class="btn btn-success btn-sm" type="button" id="logout">Logout</button></div>
         </div>
     </nav>
-    <div class="row" data-aos="zoom-in-up" data-aos-once="true" style="background-color:rgba(242,247,246,0.74);padding:0px;margin:45px;height:auto;width:auto;border:2px solid rgb(201,196,196);border-radius:4px;"><div class="col-2 col-md-1 offset-lg-0 d-inline d-flex flex-column justify-content-center" style="border-right:1px solid rgb(217,217,214);background-color:rgba(242,247,246,0.74);">
-    <div class="d-flex flex-column align-items-center"><i class="fa fa-angle-up d-inline" style="width:16px;height:27px;font-size:26px;"></i><i class="fa fa-angle-down d-inline" style="font-size:26px;"></i></div>
-</div><div class="col-10 col-md-11 offset-lg-0" style="background-color:#f2f5f8;width:680px;">
-    <div>
-        <p class="text-muted" style="margin:0px;margin-left:-10px;font-size:small;">Posted By</p>
-    </div>
-    <hr />
-    <div>
-        <p class="text-left" style="margin-top:10px;font-size:26px;font-family:Aclonica, sans-serif;">Question</p>
-    </div>
-    <div>
-        <p class="text-left" style="font-size:small;margin-left:16px;margin-top:10px;font-family:Adamina, serif;">Situation</p>
-    </div>
-</div></div>
     <div class="footer-basic">
+        <div class="row register-form">
+            <div class="col-md-8 offset-md-2">
+                <form class="custom-form">
+                    <h1>Create Post</h1>
+                    <div class="form-row form-group">
+                        <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Problem</label></div>
+                        <div class="col-sm-6 input-column"><input class="form-control" type="text"></div>
+                    </div>
+                    <div class="form-row form-group">
+                        <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">Statement</label></div>
+                        <div class="col-sm-6 input-column"><textarea class="form-control" rows="5" cols="10" wrap="hard" placeholder="Explain a bit" autofocus=""></textarea></div>
+                    </div><button class="btn btn-light submit-button" type="button">Share</button></form>
+            </div>
+        </div>
         <footer>
             <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
             <p class="copyright">Company Name © 2017</p>
         </footer>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="preview">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Are you sure?</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                <div class="modal-body">
-                    <p>Logout of All Devices</p>
-                </div>
-                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Logout</button></div>
-            </div>
-        </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
