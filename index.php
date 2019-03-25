@@ -35,9 +35,9 @@
     <?php include("includes/modal.php"); ?>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!--     <script src="assets/js/jquery.min.js"></script>
- -->    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/modal.js"></script>
     <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
     <script src="assets/js/bs-animation.js"></script>
