@@ -3,8 +3,11 @@ session_start();
 function Redirect()
 {
 
-    $_SESSION['postcreated']="<div class='alert alert-success'>
+    $_SESSION['postcreated']="
+    <div class='row'>
+    <div class='alert alert-success'>
     <strong>Your Post have been shared!</strong>
+</div>
 </div>";
 header('Location: index.php');
 

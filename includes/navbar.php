@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-light navbar-expand-md custom-header">
         <div class="container-fluid"><a class="navbar-brand" href="index.php" style="color:rgb(241,238,238);">Idea<span><strong>Galore</strong></span></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
@@ -21,4 +20,6 @@
         </div>
         </div>
     </nav>
+<div class="loader" ><img src="spinner.gif"></div>
+
 

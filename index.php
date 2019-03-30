@@ -2,7 +2,6 @@
 <html>
 
 <head>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,12 +48,14 @@
         a#post_to_plan:visited {
             color: #b7bbbf;
         }
+    
 </style>
 
 
 </head>
 
 <body>
+
 
 
 
@@ -68,7 +69,7 @@
     }
     session_destroy(); 
     ?>
-    
+
     <?php include("includes/main.php"); ?>
     <?php include("includes/posts.php"); ?>
     <?php include("includes/footer.php"); ?>
@@ -111,10 +112,15 @@ $.ajax({
 });
             });
 
+
+window.onload = function() 
+    {
+        //display loader on page load 
+        $('.loader').fadeOut();
+    }
 </script>
+
 </body>
 
 
-<head>
-</head>
 </html>
