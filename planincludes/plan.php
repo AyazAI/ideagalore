@@ -114,7 +114,6 @@ echo "
             </div>
             <hr>
 
-            <a href='plan.php?id=".$row['id']."' id='post_to_plan'>
             <div style='font-family:'Roboto Slab', serif;'>
                 <p class='text-left' style='margin-top:10px;font-size:26px;font-family:Amiko, sans-serif;'>".$row['question']."</p>
             </div>
@@ -138,7 +137,7 @@ echo "
             
 
             echo "
-            </a>           
+            
         </div>
     </div>";
 
