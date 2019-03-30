@@ -268,7 +268,7 @@ if (isLoggedIn()) {
             </div>
             <footer>
                 <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-                <p class="copyright">Company Name © 2017</p>
+                <p class="copyright">IdeaGalore © <?php echo date("Y");?></p>
             </footer>
         </div>
         <script src="assets/js/jquery.min.js"></script>
