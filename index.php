@@ -2,9 +2,11 @@
 <html>
 
 <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BehtarPakistanOrignal</title>
+    <title>Idea Galore</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
@@ -30,7 +32,10 @@
     <link rel="stylesheet" href="assets/css/Profile-Edit-Form.css">
     <link rel="stylesheet" href="assets/css/Profile-Edit-Form1.css">
     <link rel="stylesheet" href="assets/css/sticky-dark-top-nav-with-dropdown.css">
+
     <link rel="stylesheet" href="assets/css/styles.css">
+
+
     <style type="text/css">
     a#post_to_plan{
             text-decoration: none;
@@ -109,4 +114,7 @@ $.ajax({
 </script>
 </body>
 
+
+<head>
+</head>
 </html>

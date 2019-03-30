@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="assets/css/Profile-Edit-Form1.css">
     <link rel="stylesheet" href="assets/css/sticky-dark-top-nav-with-dropdown.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/innovation.png">
+
 </head>
 
 <body>

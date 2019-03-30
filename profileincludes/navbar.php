@@ -4,7 +4,7 @@
         class="collapse navbar-collapse" id="navbar-collapse">
         <ul class="nav navbar-nav links">
             <li role="presentation" class="nav-item">
-                <a href="#" class="nav-link" style="margin-right:14px;font-family:&#39;Roboto Slab&#39;, serif;font-size:19px;">How it Works?</a>
+                <a href="howitworks.php" class="nav-link" style="margin-right:14px;font-family:&#39;Roboto Slab&#39;, serif;font-size:19px;">How it Works?</a>
             </li>
         </ul>
         <form class="form-inline mx-auto" style="font-family:Roboto, sans-serif;">

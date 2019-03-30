@@ -205,6 +205,8 @@ if (isLoggedIn()) {
     <link rel="stylesheet" href="assets/css/sticky-dark-top-nav-with-dropdown.css">
     <link rel="stylesheet" href="assets/css/styles.css">
         <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+            <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/innovation.png">
+
         
 
 
@@ -216,7 +218,7 @@ if (isLoggedIn()) {
             <div
             class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav links">
-                <li class="nav-item" role="presentation"><a class="nav-link" href="#" style="margin-right:14px;font-family:'Roboto Slab', serif;font-size:19px;">How it Works?</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="howitworks.php" style="margin-right:14px;font-family:'Roboto Slab', serif;font-size:19px;">How it Works?</a></li>
             </ul>
             <form class="form-inline mx-auto" style="font-family:Roboto, sans-serif;"><input class="form-control" type="search" placeholder="Search for Posts ..." autofocus="" autocomplete="on" style="width:352px;"></form>
             <ul class="nav navbar-nav ml-auto">

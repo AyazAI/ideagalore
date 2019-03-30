@@ -16,6 +16,6 @@
                 </a>
 
             </li>
-        </ul><button class="btn btn-success" type="button" id="logout">Logout</button></div>
+        </ul><a href="OUT/logout.php"><button class="btn btn-success" type="button">Logout</button></a></div>
         </div>
     </nav>
