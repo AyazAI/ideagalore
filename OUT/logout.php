@@ -33,7 +33,7 @@ if (isLoggedIn()) {
 $token= $_COOKIE['bp'];
 $query = mysqli_query($conn, "SELECT user_id FROM login_tokens WHERE token = '$token'");
 $row= mysqli_fetch_assoc($query);
-$id = $row['user_id'];
+$id = $row['user_id'];	
 
 if (isset($_POST['confirm'])) {
 
@@ -75,26 +75,50 @@ if (isset($_POST['confirm'])) {
 <html>
 <head>
 	<title></title>
-	<?php include("../links/link.html") ?>
+	<link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:300,400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/header1.css">
+    <link rel="stylesheet" href="assets/css/header2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
+    <link rel="stylesheet" href="../assets/css/Pretty-Header.css">
+    <link rel="stylesheet" href="../assets/css/sticky-dark-top-nav-with-dropdown.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/brainstorm-skill.png" type="image/x-icon"/>
 </head>
 <body>
-	<nav class='navbar navbar-light navbar-expand-md navigation-clean-search'>
-		<div class='container'><a class='navbar-brand' href='#' data-aos='fade-down' data-aos-delay='50' data-aos-once='true'>LOGO</a><button class='navbar-toggler' data-toggle='collapse' data-target='#navcol-1'><span class='sr-only'>Toggle navigation</span><span class='navbar-toggler-icon'></span></button>
-			<div
-			class='collapse navbar-collapse' id='navcol-1'>
-			<ul class='nav navbar-nav'>
-				<li class='nav-item' role='presentation'><a class='nav-link active' href='#'><span><i class='fa fa-newspaper-o' style='font-size:25px;'></i></span></a></li>
-				<li class='nav-item' role='presentation'><a class='nav-link' href='#'>Settings</a></li>
-			</ul>
-			<form class='form-inline mx-auto' target='_self' style='width:233px;'>
-				<div class='form-group'><label for='search-field'><i class='fa fa-search'></i></label><input class='form-control search-field' type='search' name='search' placeholder='Search for topic' id='search-field'></div>
-			</form>
-			<a class='btn btn-light action-button' role='button' href='OUT/logout.php'>Logout</a>
-		</div>
-	</div>
-</nav>
+	
 
-<div>
+<nav class="navbar navbar-light navbar-expand-md custom-header">
+        <div class="container-fluid"><a class="navbar-brand" href="index.php" style="color:rgb(241,238,238);">Idea<span><strong>Galore</strong></span></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav links">
+                    <li class="nav-item" role="presentation"><a class="nav-link" style="margin-right:14px;font-family:'Roboto Slab', serif;font-size:19px;" href="howitworks.php">How it Works?</a></li>
+                </ul>
+                <form class="form-inline mx-auto" style="font-family:Roboto, sans-serif;"><input class="form-control" type="search" placeholder="Search for Posts ..." autofocus="" autocomplete="on" style="width:352px;"></form>
+                <ul class="nav navbar-nav ml-auto">
+            <li>
+                <a href="../profile.php">
+                    <button class="btn btn-primary" style="margin-right: 4px;">Profile</button>
+                </a>
+
+            </li>
+        </ul>
+
+
+        </div>
+        </div>
+    </nav>
+
+
 
 
 <div class="jumbotron jumbotron-fluid" >

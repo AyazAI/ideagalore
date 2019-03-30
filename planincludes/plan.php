@@ -47,7 +47,7 @@ if(isset($_GET['id'])) {
     $firstName=$names['first_name'];
     $lastName=$names['last_name'];
 
-    echo " <div class='row' data-aos='zoom-in-up' data-aos-once='true' style='background-color:rgba(242,247,246,0.74);padding:0px;margin:45px;height:auto;width:auto;border:2px solid rgb(201,196,196);border-radius:4px;'><div class='col-2 col-md-1 offset-lg-0 d-inline d-flex flex-column justify-content-center' style='border-right:1px solid rgb(217,217,214);background-color:rgba(242,247,246,0.74);'>
+    /*echo " <div class='row' data-aos='zoom-in-up' data-aos-once='true' style='background-color:rgba(242,247,246,0.74);padding:0px;margin:45px;height:auto;width:auto;border:2px solid rgb(201,196,196);border-radius:4px;'><div class='col-2 col-md-1 offset-lg-0 d-inline d-flex flex-column justify-content-center' style='border-right:1px solid rgb(217,217,214);background-color:rgba(242,247,246,0.74);'>
 
     <div class='d-flex flex-column align-items-center'>
 
@@ -60,17 +60,87 @@ if(isset($_GET['id'])) {
 </div>
 
 <div class='col-10 col-md-11 offset-lg-0' style='background-color:#f2f5f8;width:680px;'>
- <div>
+   <div>
     <p class='text-muted' style='margin:0px;margin-left:-10px;font-size:small;'>Posted By&nbsp;".$firstName." ".$lastName."</p>
 </div>
 <hr />
 <div>
     <p class='text-left' style='margin-top:10px;font-size:26px;font-family:Aclonica, sans-serif;'>".$row['question']."</p>
 </div>
+
+";
+
+if ($row['postimg']) {
+    echo("
+        <div style='display:flex; justify-content: center; align-items:center; overflow: none;'>
+            <img src=".$row['postimg']." width='400' height='200' style='flex-shrink:0;min-width:80%;min-height: 100%;'></img>
+        </div>");
+}
+if ($row['postvideo']) {
+    echo "<hr>
+    <iframe width='560' height='315' allowfullscreen frameborder='0' src=".$row['postvideo']." class='d-flex flex-row justify-content-center'></iframe>
+    ";
+}
+
+echo "
 <div>
     <p class='text-left' style='font-size:small;margin-left:16px;margin-top:10px;font-family:Adamina, serif;'>".$row['situation']."</p>
 </div>
-</div></div>";
+</div></div>";*/
+ echo "
+        <div class='row' data-aos='zoom-in-up' data-aos-once='true' style='background-color:rgba(242,247,246,0.74);padding:0px;margin:45px;height:auto;width:auto;border:2px solid rgb(201,196,196);border-radius:4px;'>
+
+        <div class='col-1 col-lg-1 offset-lg-0 d-flex flex-column justify-content-center' style='border-right:1px solid rgb(217,217,214);background-color:rgba(242,247,246,0.74);'>
+
+            <div class='d-flex flex-column align-items-center align-self-center'>
+            
+            <a class='options' id='";?><?php echo $row['id'];?><?php echo "' data-vote-type='1' style='cursor:pointer;'>
+            <i class='fa fa-arrow-up d-inline' style='width:16px;height:27px;font-size:21px;'></i>
+            </a>
+
+            <span id='total-votes-".$row['id']."'>".$row['votes']."</span>
+
+            <a class='options' id='";?><?php echo $row['id'];?><?php echo "' data-vote-type='-1' style='cursor:pointer;'>
+            <i class='fa fa-arrow-down d-inline' style='font-size:21px;'></i>
+            </a>
+
+
+            </div>
+        </div>
+
+        <div class='col-10 col-lg-11 offset-lg-0' style='background-color:#fcfcfc;width:680px;'>
+            <div>
+                <p class='text-muted' style='margin:0px;margin-left:-10px;font-size:small;font-family:Aldrich, sans-serif;'>Posted By &nbsp;<strong>".$firstName." ".$lastName."</p>
+            </div>
+            <hr>
+
+            <a href='plan.php?id=".$row['id']."' id='post_to_plan'>
+            <div style='font-family:'Roboto Slab', serif;'>
+                <p class='text-left' style='margin-top:10px;font-size:26px;font-family:Amiko, sans-serif;'>".$row['question']."</p>
+            </div>
+            <div>
+                <p class='text-left' style='font-size:small;margin-left:16px;margin-top:10px;font-family:Amiko, sans-serif;'>".$row['situation']."</p>
+            </div>
+
+            ";
+            if ($row['postimg']) {
+                echo " <div>
+            <img class='img-fluid' src=".$row['postimg']." data-bs-hover-animate='pulse' id='image'>
+            </div>";
+            }
+
+             if ($row['postvideo']) {
+                echo "<div>
+            <iframe width='560' height='315' allowfullscreen='' frameborder='0' src=".$row['postvideo']." id='video'>
+            </iframe>
+            </div>";
+            }
+            
+
+            echo "
+            </a>           
+        </div>
+    </div>";
 
 }
 ?>
@@ -88,11 +158,11 @@ if(isset($_GET['id'])) {
         $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         ?>
 
-<br>
+        <br>
 
-<?php
-echo '<iframe src="https://www.facebook.com/plugins/share_button.php?href='.$actual_link.'&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId" width="83" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>';
-?>
+        <?php
+        echo '<iframe src="https://www.facebook.com/plugins/share_button.php?href='.$actual_link.'&layout=button_count&size=large&mobile_iframe=true&width=83&height=28&appId" width="83" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>';
+        ?>
     </div>
     <div class="col-4"></div>
 
@@ -165,7 +235,7 @@ while($row = mysqli_fetch_assoc($result)) {
 </div>
 
 <div class='col-10 col-md-11 offset-lg-0' style='background-color:#f2f5f8;width:680px;'>
-   <div>
+ <div>
     <p class='text-muted' style='margin:0px;margin-left:-10px;font-size:small;'>Posted By&nbsp;".$firstName." ".$lastName."</p>
 </div>
 <hr />
@@ -182,31 +252,31 @@ while($row = mysqli_fetch_assoc($result)) {
 <script type="text/javascript">
     $(document).ready(function() {
 
-       
-         
-    $(".options").on("click", function(){
 
-    var post_id = $(this).attr("id");
-    var vote_type = $(this).data("vote-type");
 
-$.ajax({
-    type : 'POST',
-    url : 'voteplan.php',
-    dataType:'JSON',
-    
-    data : {
-        post_id:post_id, 
-        vote_type:vote_type
-    },
-    
-    success : function(response){
-        $("#total-votes-"+response.post_id).text(response.votes);
+        $(".options").on("click", function(){
 
-    }
-});
-});
+            var post_id = $(this).attr("id");
+            var vote_type = $(this).data("vote-type");
 
+            $.ajax({
+                type : 'POST',
+                url : 'voteplan.php',
+                dataType:'JSON',
+
+                data : {
+                    post_id:post_id, 
+                    vote_type:vote_type
+                },
+
+                success : function(response){
+                    $("#total-votes-"+response.post_id).text(response.votes);
+
+                }
             });
+        });
+
+    });
 </script>
 
 <!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
@@ -216,14 +286,14 @@ $.ajax({
 <link rel="stylesheet" type="text/css" href="assets/summernote/css/summernote-lite-flatly.css"> -->
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-bs4.js"></script>
 
 <script>
-        $('#summernote').summernote({
+    $('#summernote').summernote({
         placeholder: 'Share your Idea ... ',
         tabsize: 2,
         height: 200,
@@ -231,5 +301,5 @@ $.ajax({
         maxHeight: 400,
        // focus: false
 
-    }); 
+   }); 
 </script>

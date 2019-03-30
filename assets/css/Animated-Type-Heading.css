@@ -40,3 +40,25 @@
   font-weight:900;
 }
 
+@media (min-width: 992px) {
+  #image {
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    margin-bottom:2px;
+  }
+}
+
+#image {
+  max-width:100%;
+  height:auto;
+}
+
+#video {
+  /*height:100%;*/
+  width:100%;
+  /*object-fit:contain;*/
+  display:block;
+}
+

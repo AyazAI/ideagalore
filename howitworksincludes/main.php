@@ -26,7 +26,7 @@
                 <div class="col-sm-6 col-md-5 col-lg-4 item">
                     <div class="box"><i class="fa fa-leaf icon"></i>
                         <h3 class="name">Step 4</h3>
-                        <p class="description" style="font-size:20px;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Together &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; we will make a plan to tackle it!</p>
+                        <p class="description" style="font-size:20px;">Together we will make a plan to tackle it!</p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-4 item">

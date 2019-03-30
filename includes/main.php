@@ -109,7 +109,9 @@ if (isLoggedIn()) {
             <div class="col-md-12">
                 <div class="jumbotron">
                     <h1 data-aos="fade-down-left" data-aos-once="true">Add Value to Community</h1>
-                    <p>Everything comes with courage. Just support your community</p>
+                    <p>Do you have any idea for improving or enhance something?</p>
+                    <p>This is the platform that you will need!</p>
+                    <p>Share the problem, watch multiple plans to tackle it! and will be shared widely to raise awareness</p>
                     
                     <p>
                     <a class="btn btn-success" id="createpost" href="createpost.php" data-aos="fade-right" data-aos-delay="100" data-aos-once="true">Create your Post</a>
