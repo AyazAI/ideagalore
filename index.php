@@ -68,8 +68,8 @@
     }
     session_destroy(); 
     ?>
+    
     <?php include("includes/main.php"); ?>
-
     <?php include("includes/posts.php"); ?>
     <?php include("includes/footer.php"); ?>
     <?php include("includes/modal.php"); ?>

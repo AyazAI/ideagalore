@@ -66,6 +66,7 @@ if(mysqli_num_rows($result) > 0) {
             </div>
 
             ";
+            
             if ($row['postimg']) {
                 echo " <div>
             <img class='img-fluid' src=".$row['postimg']." data-bs-hover-animate='pulse' id='image'>
