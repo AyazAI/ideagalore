@@ -1,5 +1,6 @@
-Options -Indexes
 RewriteEngine On
+Options -Indexes
+
 
 # Unless directory, remove trailing slash
 RewriteCond %{REQUEST_FILENAME} !-d
