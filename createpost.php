@@ -256,7 +256,7 @@ if (isLoggedIn()) {
 
                         <div class="form-row form-group">
                             <div class="col-sm-4 label-column">
-                                <label class="col-form-label" for="email-input-field">Enter URL for Video</label></div>
+                                <label class="col-form-label" for="email-input-field">Enter URL for YouTube Video</label></div>
                                 <div class="col-sm-6"><input class="form-control" type="text" name="video"></input></div>
 
                             </div>
