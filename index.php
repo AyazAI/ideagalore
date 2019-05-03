@@ -58,14 +58,12 @@
 
 
 
-
     <?php include("includes/navbar.php"); ?>
     <?php
     session_start();
     if (isset($_SESSION['postcreated'])) {
-        
+        echo "<br>";
         echo $_SESSION['postcreated'];
-        
     }
     session_destroy(); 
     ?>

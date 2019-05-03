@@ -18,6 +18,7 @@
         <a href="OUT/logout.php"><button class="btn btn-success" type="button">Logout</button></a>
 
         </div>
+        
         </div>
     </nav>
 <div class="loader" ><img src="spinner.gif"></div>

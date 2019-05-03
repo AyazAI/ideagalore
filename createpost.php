@@ -4,11 +4,12 @@ function Redirect()
 {
 
     $_SESSION['postcreated']="
-    <div class='row'>
-        <div class='alert alert-success'>
+    <div class='container'>
+        <div class='alert alert-success' style='width:100% !important;'>
             <strong>Your Post have been shared!</strong>
         </div>
-    </div>";
+        </div>
+    ";
     header('Location: index.php');
 
     exit();
