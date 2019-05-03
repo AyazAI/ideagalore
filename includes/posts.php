@@ -17,8 +17,7 @@ if(mysqli_num_rows($result) > 0) {
         /*Getting the post id for user*/
 
 
-        $postbyid =$row['post_by'];
-
+       $postbyid =$row['post_by'];
 
         /*Getting the names*/
         $sql = "SELECT * FROM users WHERE id='$postbyid'";
@@ -26,8 +25,6 @@ if(mysqli_num_rows($result) > 0) {
         $userarray= mysqli_fetch_assoc($resultforuserid);
         $firstName=$userarray['first_name'];
         $lastName=$userarray['last_name'];
-
-
 
 
         echo "
@@ -57,7 +54,7 @@ if(mysqli_num_rows($result) > 0) {
             </div>
             <hr>
 
-            <a href='plan.php?id=".$row['id']."' id='post_to_plan'>
+            <a href='plan.php?id=".$row['id']."' id='post_to_plan' style='overflow: hidden; display: block;z-index: 5;'>
             <div style='font-family:'Roboto Slab', serif;'>
                 <p class='text-left' style='margin-top:10px;font-size:26px;font-family:Amiko, sans-serif;'>".$row['question']."</p>
             </div>
@@ -66,18 +63,24 @@ if(mysqli_num_rows($result) > 0) {
             </div>
 
             ";
+            echo "&nbsp";
             
             if ($row['postimg']) {
                 echo " <div>
             <img class='img-fluid' src=".$row['postimg']." data-bs-hover-animate='pulse' id='image'>
             </div>";
+            echo "&nbsp";
             }
 
-             if ($row['postvideo']) {
+
+            if ($row['postvideo']) {
                 echo "<div>
-            <iframe width='560' height='315' allowfullscreen='' frameborder='0' src=".$row['postvideo']." id='video'>
-            </iframe>
+                <iframe width='560' height='315' allowfullscreen='' frameborder='0' src=".$row['postvideo']." id='video'>
+                <a href='plan.php?id=".$row['id']."' id='post_to_plan' style='position:absolute; top:0; left:0; display:inline-block; width:560; height:315; z-index:5;'>
+
+                </iframe>
             </div>";
+            echo "&nbsp";
             }
             
 
