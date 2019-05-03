@@ -1,8 +1,8 @@
 <?php 
-session_start();
+
 function Redirect()
 {
-
+    session_start();
     $_SESSION['postcreated']="
     <div class='container'>
         <div class='alert alert-success' style='width:100% !important;'>
@@ -10,8 +10,8 @@ function Redirect()
         </div>
         </div>
     ";
-    header('Location: index.php');
 
+    header('Location: index.php');
     exit();
 }
 include('config/dbconnection.php'); 
@@ -247,7 +247,7 @@ if (isLoggedIn()) {
         </ul><button class="btn btn-success" type="button" id="logout">Logout</button></div>
     </div>
 </nav>
-<div class="footer-basic">
+<div>
     <div class="row register-form">
         <div class="col-md-8 offset-md-2">
             <form class="custom-form" action="createpost.php" method="POST" enctype="multipart/form-data">
@@ -280,7 +280,7 @@ if (isLoggedIn()) {
                 </div>
             </div>
         </div>
-        <footer>
+        <footer class="footer-basic">
             <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
             <p class="copyright">IdeaGalore © <?php echo date("Y");?></p>
         </footer>
