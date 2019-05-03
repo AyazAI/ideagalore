@@ -17,8 +17,10 @@ function Redirect()
 include('config/dbconnection.php'); 
 
 if(isset($_POST['submit'])) {
-    $question = $_POST['question'];
-    $situation = $_POST['situation'];
+
+    $question = mysqli_real_escape_string($conn, $_POST['question']);
+    $situation = mysqli_real_escape_string($conn, $_POST['situation']);
+
     $date = date("Y-m-d H:i:s");
 
 
