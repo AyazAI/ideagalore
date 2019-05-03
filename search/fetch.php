@@ -18,12 +18,8 @@ if(isset($_POST["query"]))
  $html = '';
 
  $html .= '
-  <table class="table table-bordered table-striped">
-   <tr>
-    <th>Question</th>
-    <th>Situation</th>
-
-   </tr>
+   <h2>Question</h2>
+    <h2>Situation</h2>
   ';
 
  if(mysqli_num_rows($result) > 0)
@@ -33,12 +29,9 @@ if(isset($_POST["query"]))
    $data[] = $row["question"];
    $data[] = $row["situation"];
    
-   $html .= '
-   <tr>
-    <td>'.$row["question"].'</td>
-    <td>'.$row["situation"].'</td>
-   </tr>
-   ';
+   $html .= "
+    Data
+   ";
   }
  }
  else
@@ -52,7 +45,7 @@ if(isset($_POST["query"]))
  }
 
 
- $html .= '</table>';
+ $html .= '';
  
  if(isset($_POST['typehead_search']))
  {

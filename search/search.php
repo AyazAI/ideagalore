@@ -64,6 +64,6 @@
     var query = $(this).text();
     load_data(query);
   });
-
 });
+  
 </script>

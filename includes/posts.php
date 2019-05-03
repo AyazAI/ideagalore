@@ -62,7 +62,7 @@ if(mysqli_num_rows($result) > 0) {
                 <p class='text-left' style='margin-top:10px;font-size:26px;font-family:Amiko, sans-serif;'>".$row['question']."</p>
             </div>
             <div>
-                <p class='text-left' style='font-size:small;margin-left:16px;margin-top:10px;font-family:Amiko, sans-serif;'>".$row['situation']."</p>
+                <p class='text-left' style='font-size:small;margin-left:18px;margin-top:10px;font-family:Amiko, sans-serif;'>".$row['situation']."</p>
             </div>
 
             ";
