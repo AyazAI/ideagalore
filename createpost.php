@@ -255,26 +255,25 @@ if (isLoggedIn()) {
             <form class="custom-form" action="createpost.php" method="POST" enctype="multipart/form-data">
                 <h1>Create Post</h1>
                 <div class="form-row form-group">
-                    <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">Problem</label></div>
+                    <div class="col-sm-4 label-column"><label class="col-form-label" for="name-input-field">What are you thinking?</label></div>
                     <div class="col-sm-6 input-column"><input class="form-control" type="text" name="question"></div>
                 </div>
                 <div class="form-row form-group">
-                    <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">Statement</label></div>
-                    <div class="col-sm-6 input-column"><textarea class="form-control" rows="5" cols="10" wrap="hard" placeholder="Explain a bit" autofocus="" name="situation"></textarea></div>
+                    <div class="col-sm-4 label-column"><label class="col-form-label" for="email-input-field">Explain a bit</label></div>
+                    <div class="col-sm-6 input-column"><textarea class="form-control" rows="5" cols="10" wrap="hard" placeholder="" autofocus="" name="situation"></textarea></div>
                 </div>
 
                 <div class="form-row form-group">
                     <div class="col-sm-4 label-column">
-                        <label class="col-form-label" for="email-input-field">Upload an Image</label></div>
+                        <label class="col-form-label" for="email-input-field">Upload an Image (Optional)</label></div>
                         <div class="col-sm-6"><input class="form-control" type="file" name="image"></input></div>
 
                     </div>
 
                     <div class="form-row form-group">
                         <div class="col-sm-4 label-column">
-                            <label class="col-form-label" for="email-input-field">Enter URL for YouTube Video</label></div>
-                            <div class="col-sm-6"><input class="form-control" type="text" name="video"></input></div>
-
+                            <label class="col-form-label" for="email-input-field">Enter URL for YouTube Video (Optional)</label></div>
+                            <div class="col-sm-6"><input class="form-control" type="url" name="video"></input></div>
                         </div>
 
                         <input class="btn btn-light submit-button" type="submit" value="Share" name="submit"></input>

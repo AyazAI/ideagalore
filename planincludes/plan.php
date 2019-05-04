@@ -3,6 +3,10 @@
 <?php
 require("config/dbconnection.php");
 
+
+/* 
+    CODE FOR SHARING OF PLAN WITH MESSAGE
+*/
 if(isset($_POST['submit'])) {
 
     $plan = mysqli_real_escape_string($conn,$_POST['plan']);
@@ -16,18 +20,26 @@ if(isset($_POST['submit'])) {
     
     $sql = "INSERT INTO plans (plan, plan_for, plan_by) VALUES ('$plan', '$id', '$loggedInId')";
 
-    if (mysqli_query($conn, $sql)) {
-        echo "<div class='alert alert-success'>
+
+if (mysqli_query($conn, $sql)) {
+        echo "<div class='alert alert-success' style='width: 100%;'>
         <strong>Your Plan have been shared!</strong>
     </div>";
 }else{
     echo "<div class='alert alert-danger'>
     <strong>Sorry Try Again!</strong>
     ".mysqli_error($conn)."</div>";
+    }
 }
 
+/*
+    END
+*/
 
-}
+
+/*
+    SHOWING CURRENT POST FOR WHICH THE PLANS WILL BE CREATED 
+*/
 
 
 if(isset($_GET['id'])) {
@@ -45,46 +57,7 @@ if(isset($_GET['id'])) {
     $firstName=$names['first_name'];
     $lastName=$names['last_name'];
 
-    /*echo " <div class='row' data-aos='zoom-in-up' data-aos-once='true' style='background-color:rgba(242,247,246,0.74);padding:0px;margin:45px;height:auto;width:auto;border:2px solid rgb(201,196,196);border-radius:4px;'><div class='col-2 col-md-1 offset-lg-0 d-inline d-flex flex-column justify-content-center' style='border-right:1px solid rgb(217,217,214);background-color:rgba(242,247,246,0.74);'>
-
-    <div class='d-flex flex-column align-items-center'>
-
-        <h6>Votes</h6>
-
-        <span id='total-votes-".$row['id']."'>".$row['votes']."</span>
-
-    </div>
-
-</div>
-
-<div class='col-10 col-md-11 offset-lg-0' style='background-color:#f2f5f8;width:680px;'>
-   <div>
-    <p class='text-muted' style='margin:0px;margin-left:-10px;font-size:small;'>Posted By&nbsp;".$firstName." ".$lastName."</p>
-</div>
-<hr />
-<div>
-    <p class='text-left' style='margin-top:10px;font-size:26px;font-family:Aclonica, sans-serif;'>".$row['question']."</p>
-</div>
-
-";
-
-if ($row['postimg']) {
-    echo("
-        <div style='display:flex; justify-content: center; align-items:center; overflow: none;'>
-            <img src=".$row['postimg']." width='400' height='200' style='flex-shrink:0;min-width:80%;min-height: 100%;'></img>
-        </div>");
-}
-if ($row['postvideo']) {
-    echo "<hr>
-    <iframe width='560' height='315' allowfullscreen frameborder='0' src=".$row['postvideo']." class='d-flex flex-row justify-content-center'></iframe>
-    ";
-}
-
-echo "
-<div>
-    <p class='text-left' style='font-size:small;margin-left:16px;margin-top:10px;font-family:Adamina, serif;'>".$row['situation']."</p>
-</div>
-</div></div>";*/
+ 
  echo "
         <div class='row' data-aos='zoom-in-up' data-aos-once='true' style='background-color:rgba(242,247,246,0.74);padding:0px;margin:45px;height:auto;width:auto;border:2px solid rgb(201,196,196);border-radius:4px;'>
 
@@ -140,11 +113,13 @@ echo "
     </div>";
 
 }
+
+/*
+    END
+*/
 ?>
 
 
-<!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
--->
 
 <hr>
 <div class="row">
@@ -181,18 +156,22 @@ echo "
 
 <?php 
 
+/*
+    SHOWING LIST OF PLANS
+*/
+
 /*get the url of the post. The plan will be made for this post*/
 
 $id = $_GET['id'];
 
 /*Select all plans regarding this post*/
+$result =NULL;
 $sql = "SELECT * FROM plans WHERE plan_for='$id' ORDER BY votes DESC";
 $result = mysqli_query($conn, $sql);
-$row =mysqli_fetch_assoc($result);
 
 /*get id of user*/
-$planBy = $row['plan_by'];
-
+$rowName =mysqli_fetch_assoc($result);
+$planBy = $rowName['plan_by']; //id gained
 /*get user name*/
 $sql2 = "SELECT * FROM users WHERE id = '$planBy'";
 $result2 = mysqli_query($conn, $sql2);
@@ -200,17 +179,30 @@ $row2 =mysqli_fetch_assoc($result2);
 $firstName=$row2['first_name'];
 $lastName=$row2['last_name'];
 
+$sql = "SELECT * FROM plans WHERE plan_for='$id' ORDER BY votes DESC";
+$result = mysqli_query($conn, $sql);
+
 
 
 
 /*Show all plans*/
+if(mysqli_num_rows($result) > 0) {
+
 while($row = mysqli_fetch_assoc($result)) {
 
-    echo " <div class='row' data-aos='zoom-in-up' data-aos-once='true' style='background-color:rgba(242,247,246,0.74);padding:0px;margin:45px;height:auto;width:auto;border:2px solid rgb(201,196,196);border-radius:4px;'><div class='col-2 col-md-1 offset-lg-0 d-inline d-flex flex-column justify-content-center' style='border-right:1px solid rgb(217,217,214);background-color:rgba(242,247,246,0.74);'>
+    $planBy = $row['plan_by']; //id gained
+    /*get user name*/
+    $sql2 = "SELECT * FROM users WHERE id = '$planBy'";
+    $result2 = mysqli_query($conn, $sql2);
+    $row2 =mysqli_fetch_assoc($result2);
+    $firstName=$row2['first_name'];
+    $lastName=$row2['last_name'];
+        
+    echo "<div class='row' data-aos='zoom-in-up' data-aos-once='true' style='background-color:rgba(242,247,246,0.74);padding:0px;margin:45px;height:auto;width:auto;border:2px solid rgb(201,196,196);border-radius:4px;'><div class='col-2 col-md-1 offset-lg-0 d-inline d-flex flex-column justify-content-center' style='border-right:1px solid rgb(217,217,214);background-color:rgba(242,247,246,0.74);'>
 
 
 
-    <div class='d-flex flex-column align-items-center'>
+        <div class='d-flex flex-column align-items-center'>
         <a class='options' id='";?><?php echo $row['id'];?><?php echo "' data-vote-type='1' style='cursor:pointer;'>
             <i class='fa fa-angle-up d-inline' style='width:16px;height:27px;font-size:26px;'> 
             </i>
@@ -242,14 +234,19 @@ while($row = mysqli_fetch_assoc($result)) {
 </div>
 </div></div>";
 
+}      
+}else{
+    echo "No records";
 }
+
+/*
+    END
+*/
 
 ?>
 
 <script type="text/javascript">
     $(document).ready(function() {
-
-
 
         $(".options").on("click", function(){
 
