@@ -121,7 +121,16 @@ if (isLoggedIn()) {
         </div>
         <div class="row">
             <div class="col">
-                <h1>Current Targets</h1>
+                <h1 style="margin-bottom: 50px;
+    padding-bottom: 6px;
+    background-color: #fff;
+    text-align: center;
+    border-top: 2px solid #a8a8a8;
+    border-bottom: 2px solid #787878;
+    margin-top: 25px;
+    text-shadow: 0px 0px 3px black;
+    box-shadow: 6px 10px 7px 0px black;
+    border-radius: 13px;">Current Targets</h1>
             </div>
         </div>
     </div>
